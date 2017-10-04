@@ -1,0 +1,11 @@
+<template>
+  <require from="./youtube-video.css"></require>
+  <require from="./../value-converters/date"></require>
+  <h3 click.trigger="playFn({vid : vdata.id.videoId})">${vdata.snippet.title}</h3>
+  <img src="${vdata.snippet.thumbnails.default.url}" alt="" width="${vdata.snippet.thumbnails.default.width}" height="${vdata.snippet.thumbnails.default.height}" class="resultThumb" click.trigger="playFn({vid : vdata.id.videoId})">
+  <span>${vdata.snippet.description}</span>
+  <div class="video-extra-data">
+    <span>Channel: <a click.trigger="channelFn({id : vdata.snippet.channelId, name : vdata.snippet.channelTitle})">${vdata.snippet.channelTitle}</a></span>
+    <span>Publish date: ${vdata.snippet.publishedAt | date}</span>
+  </div>
+</template>

@@ -1,0 +1,18 @@
+youtube-video {
+  img {
+    float:left;
+    margin-right:1rem;
+  }
+  h3:hover,img:hover {
+    cursor:pointer;
+  }
+  span {
+    word-wrap:break-word;
+  }
+  .video-extra-data {
+    font-size:0.75rem;
+  }
+  span:first-of-type:after {
+    content: ' ';
+  }
+}
